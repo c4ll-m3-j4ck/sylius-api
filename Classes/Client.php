@@ -65,7 +65,7 @@ class Client
             $authStrategy,
             null,
             [
-                'token_url' => '/api/v2/admin/authentication-token',
+                'token_url' => '/api/v2/admin/administrators/token',
             ]
         );
 

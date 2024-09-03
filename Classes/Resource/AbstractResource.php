@@ -59,7 +59,7 @@ abstract class AbstractResource implements ResourceInterface
 
     public function __construct()
     {
-        $this->jsonDecoder = new JsonDecode(true);
+        $this->jsonDecoder = new JsonDecode(['json_decode_associative' => true]);
         $this->serializer = new Serializer([new PropertyNormalizer()], [new JsonEncoder()]);
     }
 
