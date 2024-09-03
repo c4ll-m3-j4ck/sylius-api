@@ -384,4 +384,9 @@ class ResultCollection implements Countable, IteratorAggregate, ArrayAccess
         $this->elementsTotal = $elementsTotal;
         return $this;
     }
+
+    public function map(\Closure $callback): array
+    {
+        return array_map($callback, $this->elements);
+    }
 }
